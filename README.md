@@ -51,5 +51,12 @@
   - setup controllers first
   - setup routers
     - import controllers
+- express router async errors
+  - a package does this for us called, express async errors
+  - instead of use try and catch in all controllers or async wrapper
+  - import it
+  - now, if any controller has an error, we will catch it in our custom error handler
+  - require in the app js
+-
 
 [Back to Top](#custom_anchor_name)
