@@ -12,6 +12,7 @@
 - ### nosql
 - ### mongoose
 - ### schema & model
+- ### aws cloud database
 
 ---
 
@@ -46,6 +47,9 @@
 - app use error handler and page not found after routes
 - start function, port with variable
 - connect to mongodb
--
+- router setup
+  - setup controllers first
+  - setup routers
+    - import controllers
 
 [Back to Top](#custom_anchor_name)
