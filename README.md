@@ -28,11 +28,22 @@
   - server is designed to handle large amounts of data and make computations
   - over 100 items, frontend will be overwhelmed and be slow
   - ready to go endpoints where you only fetch the data
-  -
+
+---
 
 ### _steps_
 
 - npm i
--
+- require dot env to get access to env variables
+- spin up express
+  - require it
+  - create instance
+- import middleware functions
+  - error handler = catches all errors, and decide response
+  - page not found handler
+  - express json = to reade the data passed to server
+- create starter route
+- app use error handler and page not found after routes
+- start function, port with variable
 
 [Back to Top](#custom_anchor_name)
