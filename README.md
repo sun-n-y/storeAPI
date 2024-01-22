@@ -45,5 +45,7 @@
 - create starter route
 - app use error handler and page not found after routes
 - start function, port with variable
+- connect to mongodb
+-
 
 [Back to Top](#custom_anchor_name)
