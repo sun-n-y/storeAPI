@@ -63,6 +63,19 @@
   - create the fields and desired defaults
   - export model
 - populate db
-  -
+  - can create a post route and manually add them or
+  - automate it by passing on a list to the database
+    - products json
+      - list of products
+    - populate js
+      - we dynamically add the list to database
+      - will need another connection
+        - connect to db with start fx but instead of listen, we use the model to add all of our product to db
+    - check connection w/o nodemon
+    - using product model we delete all the old, then create new
+    - exit process line
+      - node method exit
+      - if process is successful we want to terminate process, don't need it to be running
+-
 
 [Back to Top](#custom_anchor_name)
