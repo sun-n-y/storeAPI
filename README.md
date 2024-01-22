@@ -57,6 +57,12 @@
   - import it
   - now, if any controller has an error, we will catch it in our custom error handler
   - require in the app js
--
+- product model
+  - need schema for data structure
+  - using mongoose
+  - create the fields and desired defaults
+  - export model
+- populate db
+  -
 
 [Back to Top](#custom_anchor_name)
