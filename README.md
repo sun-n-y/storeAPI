@@ -81,5 +81,10 @@
   - instead of passing in req.query in our find. we set up new object, we pull out properties we want from req.query and pass that into our find
   - incase we pass in values that does not match model, cause we might
   - we don't want an empty array because of that
+  - mongoDB regex
+    - since mongoose sits on top of mongoDB, we can get use mongodb query operators
+    - regex provides pattern matching strings in queries
+    - we are looking for name property, but instead of looking for entire name, regex looks for pattern
+      options i for case insensitive
 
 [Back to Top](#custom_anchor_name)
