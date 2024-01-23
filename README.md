@@ -76,6 +76,10 @@
     - exit process line
       - node method exit
       - if process is successful we want to terminate process, don't need it to be running
--
+- find all products, using query params
+  - req.query
+  - instead of passing in req.query in our find. we set up new object, we pull out properties we want from req.query and pass that into our find
+  - incase we pass in values that does not match model, cause we might
+  - we don't want an empty array because of that
 
 [Back to Top](#custom_anchor_name)
