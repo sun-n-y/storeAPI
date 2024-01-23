@@ -86,5 +86,8 @@
     - regex provides pattern matching strings in queries
     - we are looking for name property, but instead of looking for entire name, regex looks for pattern
       options i for case insensitive
+- sorting
+  - order in which items displayed
+  -
 
 [Back to Top](#custom_anchor_name)
