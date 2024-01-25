@@ -2,7 +2,11 @@
 const ProductsModel = require('../models/product');
 
 const getAllProductsStatic = async (req, res) => {
-  const products = await ProductsModel.find({}).select('name price');
+  const products = await ProductsModel.find({})
+    .sort('-name')
+    .select('name')
+    .limit(10)
+    .skip(5);
   res.status(200).json({ nbHits: products.length, products });
   console.log(req.params);
 };
@@ -39,6 +43,18 @@ const getAllProducts = async (req, res) => {
     const fieldsList = fields.split(',').join(' ');
     result.select(fieldsList);
   }
+  //pagination
+  const page = Number(req.query.page) || 1;
+  const limit = Number(req.query.limit) || 10;
+  const skip = (page - 1) * limit;
+
+  result = result.skip(skip).limit(limit);
+  //so, we have 23 products but we limit response to 7 items per page
+  // 23/7 = 4 pages > 7 7 7 4
+  // so on page 1: (0 - 0 ) * 7 = 0, so no skips, but limit 7 since chained after skip
+  // so on page 2: (2-1)*7 = 7 we we skip 7 from list, then display from there but still limit 7
+  //so page 3: (3-2) and so on
+
   const products = await result;
 
   res.status(200).json({ nbHits: products.length, products });
